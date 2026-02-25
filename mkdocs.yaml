@@ -9,15 +9,15 @@
 # WHY: This data file provides the site structure and settings
 
 site_name: "Project Documentation"
-site_url: https://calebowens314.github.io/caleb-owens-python-project-4/
-repo_url: https://github.com/CalebOwens314/caleb-owens-python-project-4
+site_url: https://calebowens314.github.io/datafun-07-ml/
+repo_url: https://github.com/CalebOwens314/datafun-07-ml
 site_description: Project documentation.
 docs_dir: docs
 site_dir: site
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/CalebOwens314/caleb-owens-python-project-4
+      link: https://github.com/CalebOwens314/datafun-07-ml
 
 # WHY: Material theme is industry standard, well-documented
 theme:

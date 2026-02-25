@@ -1,29 +1,20 @@
-# datafun-04-notebooks
+# datafun-07-ml
 
-[![Docs Deploy](https://github.com/CalebOwens314/caleb-owens-python-project-4/actions/workflows/deploy-mkdocs.yml/badge.svg?branch=main)](https://github.com/CalebOwens314/caleb-owens-python-project-4/actions/workflows/deploy-mkdocs.yml)
-[![CI](https://github.com/CalebOwens314/caleb-owens-python-project-4/actions/workflows/ci-basic-mkdocs.yml/badge.svg?branch=main)](https://github.com/CalebOwens314/caleb-owens-python-project-4/actions/workflows/ci-basic-mkdocs.yml)
-[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://github.com/CalebOwens314/caleb-owens-python-project-4/)
+[![Docs Deploy](https://github.com/CalebOwens314/datafun-07-ml/actions/workflows/deploy-mkdocs.yml/badge.svg?branch=main)](https://github.com/CalebOwens314/datafun-07-ml/actions/workflows/deploy-mkdocs.yml)
+[![CI](https://github.com/CalebOwens314/datafun-07-ml/actions/workflows/ci-basic-mkdocs.yml/badge.svg?branch=main)](https://github.com/CalebOwens314/datafun-07-ml/actions/workflows/ci-basic-mkdocs.yml)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://github.com/CalebOwens314/datafun-07-ml/)
 [![Python](https://img.shields.io/badge/python-3.14-blue?logo=python&logoColor=white)](https://www.python.org/)
 
-> Professional Python project: exploratory data analysis with Jupyter notebooks. (Created from Dr. Case's datafun-04-notebooks repository on GitHub.)
+> Professional Python project: predictive machine learning (ML) project, implemented using one Jupyter notebook and one .csv data file. (Created from the repository for my own project submission for project 4, which was constructed from Dr. Case's datafun-04-notebooks repository.)
 
-## Project Planning
+## Notebook Info
 
 Two languages:
 
 - This file is written in **Markdown**, a simple markup language for presenting text.
 - Our analytics logic is written in **Python**, a scripting language for implementing logic.
 
-When we first encounter a **new and unknown data set**, we want to explore: run some quick checks, view the distributions, see if the data is clean (or if there are many missing values or outliers).
-
-This task is commonly called **Exploratory Data Analysis (EDA)**.
-For EDA, it is useful to **combine presentation and code**.
-For this, we use Jupyter **notebooks**.
-
-Notebooks combine Markdown cells for section headings and narrative with Python Code cells for calculations and charts.
-
-After running the example script and notebook files,
-you'll create a similar notebook to explore a different **tabular** data file (a dataset with rows and columns).
+Notebooks (see "owens_ml.ipynb" under the "notebooks" folder) combine Markdown cells for section headings and narrative with Python Code cells for calculations and charts.
 
 ---
 
@@ -47,20 +38,9 @@ Use VS Code menu option `Terminal` / `New Terminal` and run the following comman
 git pull
 ```
 
-In this project, **notebooks are the primary analysis artifact**; but scripts can be used to mirror the core logic.
+**Please note that in this project, notebooks are the only analysis artifact (there are no scripts to run).**
 
-In the same VS Code terminal, run the example Python source files as modules (preferred):
-
-```shell
-uv run python -m datafun_04_notebooks.app_case
-uv run python -m datafun_04_notebooks.app_owens
-```
-
-If a command fails, verify:
-
-- Only this project is open in VS Code.
-- The terminal is open in the project root folder.
-- The `uv sync --extra dev --extra docs --upgrade` command completed successfully.
+- Go to the owens_ml.ipynb file (under the "notebooks" folder in this repo) to run the analysis. Start by clicking "Clear All Outputs," then click "Restart," and finally, click "Run All" to see everything.
 
 Run Python checks and tests (as available):
 
@@ -90,97 +70,6 @@ git push -u origin main
 Additional details and troubleshooting are available in the [Pro-Analytics-02 Documentation](https://denisecase.github.io/pro-analytics-02/).
 
 ---
-
-## Project Objectives
-
-### Project Task 1. Personalize Your Documentation Links
-
-Open [mkdocs.yaml](./mkdocs.yaml).
-This file configures the associated project documentation website (powered by MkDocs)
-Use CTRL+f to find each occurrence of the source GitHub account (e.g. `denisecase`).
-Change each occurrence to point to your GitHub account instead (spacing and capitalization MUST match the URL of your GitHub account **exactly**.)
-
-### Project Task 2. Personalize This README.md file
-
-Edit this file in VS Code.
-Use CTRL+f to find each occurrence of the source GitHub account (e.g. `denisecase`).
-Change each occurrence to point to your GitHub account instead (spacing and capitalization MUST match the URL of your GitHub account **exactly**.)
-
-### Project Task 3. Run the Script Example
-
-1. Read the code file in src/.
-2. Run the code file in src/ following this README instructions.
-3. Confirm that a project.log was generated in the root project folder.
-4. Git add, commit, push to GitHub.
-5. Verify your project.log file is visible in GitHub.
-
-### Project Task 4. Run the Notebook Example
-
-In VS Code, with this project open, navigate to the notebooks/ folder.
-Open `eda_case.ipynb`.
-
-Follow the instructions to:
-
-1. Select the notebook kernel.
-2. Run All.
-3. Git add, commit, push to GitHub.
-4. Verify the executed notebook is visible in GitHub.
-
-If there are any errors, try to figure out how to address them.
-After getting a good example notebook, git add-commit-push to GitHub.
-Verify the example notebook is presented as you like.
-
-### Project Task 5. Create a New Notebook File and conduct a New EDA
-
-Now apply what you learned. Create a new notebook and perform EDA on a different dataset.
-
-Recommended Option 1: Use a Seaborn Built-in Dataset
-
-Seaborn includes several datasets. To see the list:
-```python
-import seaborn as sns
-print(sns.get_dataset_names())
-```
-
-Good choices for practice:
-- `iris` - flower measurements (150 rows, 5 columns)
-- `tips` - restaurant tipping data (244 rows, 7 columns)
-- `diamonds` - diamond prices and attributes (53940 rows, 10 columns)
-- `mpg` - car fuel efficiency (398 rows, 9 columns)
-- `titanic` - passenger survival data (891 rows, 15 columns)
-
-Load any of these with: `df = sns.load_dataset('dataset_name')`
-
-Alternatively, Option 2: Choose Your Own Tabular Dataset
-
-Put your dataset in data/raw/ as a csv file.
-Use pathlib Paths to create a path to your csv file.
-
-Load a CSV file with: `df = pd.read_csv('path_to_your_file.csv')`
-
-Follow the example, and ensure you have:
-
-- Title and header (author, purpose, date, dataset info with source/citation)
-- Numbered sections that match the example.
-- Good narrative showing your observations and insights as you work through the process.
-
----
-
-## Notes
-
-- You do not need to add to or modify `tests/`. They are provided for example only.
-- You do not need to view or modify any of the supporting **config files**.
-- Many of the repo files are silent helpers. Explore as you like, but nothing is required.
-- You do NOT need to understand everything. Understanding builds naturally over time.
-- Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
-- Use `CTRL+f` to find (and replace) with in a file.
-
-## Troubleshooting >>> or ...
-
-If you see something like this in your terminal: `>>>` or `...`
-You accidentally started Python interactive mode.
-It happens.
-Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## Resources
 

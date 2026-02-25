@@ -8,7 +8,7 @@
 # WHY: Centralizes project configuration.
 
 [project]
-name = "datafun-04-notebooks" # CUSTOM: Package distribution name (use lowercase and dashes).
+name = "datafun-07-ml" # CUSTOM: Package distribution name (use lowercase and dashes).
 readme = "README.md"
 requires-python = ">=3.14"
 version = "0.1.0"
@@ -26,6 +26,7 @@ dependencies = [
     "numpy>=2.4.2",
     "jupyterlab>=4.5.5",
     "pyarrow>=23.0.1",
+    "scipy-stubs>=1.17.1.0",
 ]
 
 
